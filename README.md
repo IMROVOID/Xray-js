@@ -1,6 +1,6 @@
 # Xray-js
 
-A powerful, browser-based Xray configuration validator and editor powered by WebAssembly. This project is built by compiling the actual **Xray-core** source code into WASM, creating a secure, client-side playground with an intelligent editor.
+A powerful, browser-based Xray configuration validator and editor powered by WebAssembly. This project is built by compiling the actual **Xray-core** source code into WASM, creating a secure, client-side playground with an intelligent code editor.
 
 ### [🚀 View Live Demo 🚀](https://imrovoid.github.io/xray-js/)
 
@@ -9,7 +9,7 @@ A powerful, browser-based Xray configuration validator and editor powered by Web
 ## ✨ Key Features
 
 * **Native Validation:** Uses the real Xray-core logic via WebAssembly to parse configurations, ensuring 100% accuracy compared to the native binary.
-* **Intelligent Editor:** Features syntax highlighting, auto-completion, and hovering documentation based on the Xray schema.
+* **Intelligent Editor:** Embedded code editor features syntax highlighting, auto-completion, and hovering documentation based on the Xray schema.
 * **Client-Side Privacy:** Your configurations are processed entirely in your browser's memory using WASM. No sensitive config data is sent to any backend server.
 * **Shareable Configurations:** Generate short, Brotli-compressed links to share complex configurations with others securely and easily.
 * **Cross-Platform Logic:** Patched Go code removes system-level dependencies (like raw sockets), allowing the core routing logic to run on any modern web browser.
@@ -23,7 +23,7 @@ The project is organized to separate the Go/WASM backend logic from the frontend
 ├── scripts/            # Build scripts for Node.js
 ├── main.go             # The Go entry point interfacing between JS and Xray-core
 ├── main.wasm           # The compiled binary (generated after build)
-├── index.html          # Main frontend UI and editor logic
+├── index.html          # Main frontend UI and Monaco Editor logic
 ├── wasm_exec.js        # Go WebAssembly loader script
 ├── scrape-docs.py      # Python script to generate JSON schema from docs
 ├── build.ps1           # Windows build automation script
@@ -42,7 +42,7 @@ To get a local copy up and running, follow these simple steps.
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/mmmray/xray-js.git
+    git clone https://github.com/IMROVOID/xray-js.git
     ```
 
 2. **Navigate to the project directory:**
@@ -143,11 +143,11 @@ This project is open source and distributed under the **MIT License**. You are f
 
 ## © About the Developer
 
-This application was developed by **mmmray**.
+This application was developed by **IMROVOID**.
 
 I specialize in networking protocols, Golang development, and WebAssembly integrations. This project aims to lower the barrier of entry for Xray users by providing a robust, instant validation tool without the need for local command-line installations.
 
-* **GitHub:** [mmmray](https://github.com/mmmray)
+* **GitHub:** [IMROVOID](https://github.com/IMROVOID)
 
 ### 🙏 Support This Project
 
@@ -155,5 +155,5 @@ If you find this tool useful for debugging your configurations, please consider 
 
 | Action | Link |
 | :--- | :--- |
-| **Star on GitHub** | [github.com/mmmray/xray-js](https://github.com/mmmray/xray-js) |
-| **Report Issue** | [github.com/mmmray/xray-js/issues](https://github.com/mmmray/xray-js/issues) |
+| **Star on GitHub** | [github.com/IMROVOID/xray-js](https://github.com/IMROVOID/xray-js) |
+| **Report Issue** | [github.com/IMROVOID/xray-js/issues](https://github.com/IMROVOID/xray-js/issues) |

@@ -18,6 +18,7 @@ A powerful, browser-based Xray configuration validator and editor powered by Web
 
 The project is organized to separate the Go/WASM backend logic from the frontend presentation.
 
+```text
 /xray-js
 ├── assets/             # Temporary folder for downloaded Xray source and GeoIP data
 ├── scripts/            # Build scripts for Node.js

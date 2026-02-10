@@ -1,6 +1,6 @@
 # Xray-js
 
-A powerful, browser-based Xray configuration validator and editor powered by WebAssembly. This project is built by compiling the actual **Xray-core** source code into WASM, creating a secure, client-side playground with the intelligent **Monaco Editor**.
+A powerful, browser-based Xray configuration validator and editor powered by WebAssembly. This project is built by compiling the actual **Xray-core** source code into WASM, creating a secure, client-side playground with an intelligent editor.
 
 ### [🚀 View Live Demo 🚀](https://imrovoid.github.io/xray-js/)
 
@@ -9,7 +9,7 @@ A powerful, browser-based Xray configuration validator and editor powered by Web
 ## ✨ Key Features
 
 * **Native Validation:** Uses the real Xray-core logic via WebAssembly to parse configurations, ensuring 100% accuracy compared to the native binary.
-* **Intelligent Editor:** Embedded Monaco Editor (VS Code) features syntax highlighting, auto-completion, and hovering documentation based on the Xray schema.
+* **Intelligent Editor:** Features syntax highlighting, auto-completion, and hovering documentation based on the Xray schema.
 * **Client-Side Privacy:** Your configurations are processed entirely in your browser's memory using WASM. No sensitive config data is sent to any backend server.
 * **Shareable Configurations:** Generate short, Brotli-compressed links to share complex configurations with others securely and easily.
 * **Cross-Platform Logic:** Patched Go code removes system-level dependencies (like raw sockets), allowing the core routing logic to run on any modern web browser.
@@ -23,7 +23,7 @@ The project is organized to separate the Go/WASM backend logic from the frontend
 ├── scripts/            # Build scripts for Node.js
 ├── main.go             # The Go entry point interfacing between JS and Xray-core
 ├── main.wasm           # The compiled binary (generated after build)
-├── index.html          # Main frontend UI and Monaco Editor logic
+├── index.html          # Main frontend UI and editor logic
 ├── wasm_exec.js        # Go WebAssembly loader script
 ├── scrape-docs.py      # Python script to generate JSON schema from docs
 ├── build.ps1           # Windows build automation script
@@ -109,7 +109,7 @@ This project leverages several powerful tools to bring a system-level binary to 
 | **WebAssembly** | [webassembly.org](https://webassembly.org/) | A binary instruction format that allows Go code to run in the browser at near-native speed. |
 | **Go (Golang)** | [go.dev](https://go.dev/) | The programming language used to build Xray-core and the WASM bridge. |
 | **Xray-core** | [github.com/xtls/xray-core](https://github.com/xtls/xray-core) | The core networking platform and configuration logic. |
-| **Monaco Editor** | [microsoft.github.io/monaco-editor](https://microsoft.github.io/monaco-editor/) | The code editor that powers VS Code, used here for editing JSON. |
+
 | **Brotli-WASM** | [github.com/google/brotli](https://github.com/google/brotli) | Used for high-efficiency compression of configuration strings for sharing. |
 | **FontAwesome** | [fontawesome.com](https://fontawesome.com/) | Beautiful & consistent icons for the UI buttons. |
 

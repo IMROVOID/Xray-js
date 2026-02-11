@@ -16,10 +16,14 @@ jobs:
         uses: actions/checkout@v4
 
       # 1. Build WASM
-      - name: Download Pre-built WASM
+      - name: Build WASM from Source
         run: |
-          mkdir -p public
-          curl -L -o public/main.wasm https://github.com/mmmray/xray-online/raw/main/public/main.wasm
+          git clone https://github.com/mmmray/xray-core.git build-source
+          cd build-source
+          go mod tidy
+          GOOS=js GOARCH=wasm go build -o ../public/main.wasm -trimpath -ldflags "-s -w" ./main
+          cd ..
+          rm -rf build-source
           ls -lh public/main.wasm
 
       # 2. Build React App

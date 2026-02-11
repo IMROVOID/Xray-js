@@ -8,7 +8,7 @@ A modern, responsive React application demonstrating **Xray-core** features dire
 
 [**View Live Demo**](https://IMROVOID.github.io/Xray-js/) This project is built by compiling the actual **Xray-core** source code into WASM, creating a secure, client-side playground with an intelligent code editor.
 
-![Xray-js Screenshot](https://raw.githubusercontent.com/IMROVOID/xray-js/main/public/screenshot.webp)
+![Xray-js Screenshot](https://raw.githubusercontent.com/IMROVOID/Xray-js/refs/heads/main/public/screenshot.webp)
 
 ## ✨ Key Features
 

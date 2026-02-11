@@ -2,7 +2,7 @@ module github.com/mmmray/xray-online
 
 go 1.22.4
 
-require github.com/xtls/xray-core v1.8.23
+require github.com/xtls/xray-core v26.2.6
 
 require (
 	github.com/andybalholm/brotli v1.1.0 // indirect

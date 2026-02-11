@@ -1,8 +1,12 @@
-# Xray-js
+# Xray-js Live Demo
 
-A powerful, browser-based Xray configuration validator and editor powered by WebAssembly. This project is built by compiling the actual **Xray-core** source code into WASM, creating a secure, client-side playground with an intelligent code editor.
+![Deploy Status](https://github.com/IMROVOID/Xray-js/actions/workflows/deploy.yml/badge.svg)
 
-### [🚀 View Live Demo 🚀](https://imrovoid.github.io/xray-js/)
+A modern, responsive React application demonstrating **Xray-core** features directly in the browser using **WebAssembly (WASM)**.
+
+## 🚀 Live Demo
+
+[**View Live Demo**](https://IMROVOID.github.io/Xray-js/) This project is built by compiling the actual **Xray-core** source code into WASM, creating a secure, client-side playground with an intelligent code editor.
 
 ![Xray-js Screenshot](https://raw.githubusercontent.com/IMROVOID/xray-js/main/public/screenshot.webp)
 

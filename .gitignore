@@ -6,4 +6,3 @@
 .takeoutignore
 takeout.py
 node_modules
-package-lock.json

@@ -40,7 +40,8 @@ jobs:
           # 5. Build
           go mod tidy
           GOOS=js GOARCH=wasm go build -o public/main.wasm -trimpath -ldflags "-s -w" main.go
-          ls -lh public/main.wasm
+          cp "$(go env GOROOT)/misc/wasm/wasm_exec.js" public/
+          ls -lh public/main.wasm public/wasm_exec.js
 
       # 2. Build React App
       - name: Setup Node

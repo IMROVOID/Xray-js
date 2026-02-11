@@ -23,7 +23,7 @@ jobs:
       
       - name: Build WASM
         run: |
-          go get github.com/xtls/xray-core@main
+          go mod edit -replace github.com/xtls/xray-core=github.com/mmmray/xray-core@latest
           go mod tidy
           GOOS=js GOARCH=wasm go build -o public/main.wasm
           ls -lh public/main.wasm

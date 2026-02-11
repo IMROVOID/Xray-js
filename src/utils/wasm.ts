@@ -16,7 +16,7 @@ export const useWasm = () => {
             try {
                 const go = new window.Go();
                 const result = await WebAssembly.instantiateStreaming(
-                    fetch("/main.wasm"),
+                    fetch(import.meta.env.BASE_URL + "main.wasm"),
                     go.importObject
                 );
 

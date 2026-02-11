@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import DemoPage from './pages/DemoPage';
 import DocsPage from './pages/DocsPage';
 
 function App() {
     return (
-        <Router basename={import.meta.env.BASE_URL}>
+        <Router>
             <Layout>
                 <Routes>
                     <Route path="/" element={<DemoPage />} />

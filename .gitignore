@@ -1,7 +1,7 @@
 *.wasm
 *.js
 !scripts/*.js
-assets
+
 *.schema.json
 .takeoutignore
 takeout.py

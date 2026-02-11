@@ -15,10 +15,19 @@ export const useWasm = () => {
 
             try {
                 const go = new window.Go();
-                const result = await WebAssembly.instantiateStreaming(
-                    fetch(import.meta.env.BASE_URL + "main.wasm"),
-                    go.importObject
-                );
+                let result: WebAssembly.WebAssemblyInstantiatedSource;
+
+                try {
+                    result = await WebAssembly.instantiateStreaming(
+                        fetch(import.meta.env.BASE_URL + "main.wasm"),
+                        go.importObject
+                    );
+                } catch (streamingError) {
+                    console.warn("WASM streaming failed, falling back to arrayBuffer:", streamingError);
+                    const response = await fetch(import.meta.env.BASE_URL + "main.wasm");
+                    const buffer = await response.arrayBuffer();
+                    result = await WebAssembly.instantiate(buffer, go.importObject);
+                }
 
                 // We need to define the callback BEFORE running the instance
                 // because main.go calls it on start

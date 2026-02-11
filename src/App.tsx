@@ -6,7 +6,7 @@ import DocsPage from './pages/DocsPage';
 
 function App() {
     return (
-        <Router basename={import.meta.env.DEV ? '/' : '/Xray-js/'}>
+        <Router basename={import.meta.env.BASE_URL}>
             <Layout>
                 <Routes>
                     <Route path="/" element={<DemoPage />} />

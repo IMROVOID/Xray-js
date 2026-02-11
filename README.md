@@ -90,11 +90,21 @@ To get a local copy up and running, follow these simple steps.
 
 4. **Run the local server:**
 
-    ```sh
-    python3 -m http.server
-    ```
+    * **Node.js (Recommended):**
 
-    The application will be available at `http://localhost:8000`.
+        ```sh
+        npm run dev
+        ```
+
+        The application will be available at `http://localhost:5173`.
+
+    * **Python:**
+
+        ```sh
+        python3 -m http.server
+        ```
+
+        The application will be available at `http://localhost:8000`.
 
 ## 🔧 How to Modify the Page
 
@@ -114,7 +124,6 @@ This project leverages several powerful tools to bring a system-level binary to 
 | **WebAssembly** | [webassembly.org](https://webassembly.org/) | A binary instruction format that allows Go code to run in the browser at near-native speed. |
 | **Go (Golang)** | [go.dev](https://go.dev/) | The programming language used to build Xray-core and the WASM bridge. |
 | **Xray-core** | [github.com/xtls/xray-core](https://github.com/xtls/xray-core) | The core networking platform and configuration logic. |
-
 | **Brotli-WASM** | [github.com/google/brotli](https://github.com/google/brotli) | Used for high-efficiency compression of configuration strings for sharing. |
 | **FontAwesome** | [fontawesome.com](https://fontawesome.com/) | Beautiful & consistent icons for the UI buttons. |
 
@@ -142,23 +151,28 @@ This repository includes a GitHub Actions workflow for automated deployment.
 
 ## 📜 License & Copyright
 
-This project is open source and distributed under the **MIT License**. You are free to use, modify, distribute, and fork this software. Note that Xray-core itself may have its own licensing terms.
+This project is completely open source and available to the public. You are free to use, modify, distribute, and fork this software for any purpose. No attribution is required, but it is appreciated.
 
 ---
 
 ## © About the Developer
 
-This application was developed by **IMROVOID**.
+This application was developed and is maintained by **Roham Andarzgou**.
 
-I specialize in networking protocols, Golang development, and WebAssembly integrations. This project aims to lower the barrier of entry for Xray users by providing a robust, instant validation tool without the need for local command-line installations.
+I'm a passionate professional from Iran specializing in Graphic Design, Web Development, and cross-platform app development with Dart & Flutter. I thrive on turning innovative ideas into reality, whether it's a stunning visual, a responsive website, or a polished desktop app like this one. I also develop immersive games using Unreal Engine.
 
+* **Website:** [rovoid.ir](https://rovoid.ir)
 * **GitHub:** [IMROVOID](https://github.com/IMROVOID)
+* **LinkedIn:** [Roham Andarzgou](https://www.linkedin.com/in/roham-andarzgouu)
 
 ### 🙏 Support This Project
 
-If you find this tool useful for debugging your configurations, please consider starring the repository.
+If you find this application useful, please consider a donation. As I am based in Iran, cryptocurrency is the only way I can receive support. Thank you!
 
-| Action | Link |
+| Cryptocurrency | Address |
 | :--- | :--- |
-| **Star on GitHub** | [github.com/IMROVOID/xray-js](https://github.com/IMROVOID/xray-js) |
-| **Report Issue** | [github.com/IMROVOID/xray-js/issues](https://github.com/IMROVOID/xray-js/issues) |
+| **Bitcoin** (BTC) | `bc1qd35yqx3xt28dy6fd87xzd62cj7ch35p68ep3p8` |
+| **Ethereum** (ETH) | `0xA39Dfd80309e881cF1464dDb00cF0a17bF0322e3` |
+| **USDT** (TRC20) | `THMe6FdXkA2Pw45yKaXBHRnkX3fjyKCzfy` |
+| **Solana** (SOL) | `9QZHMTN4Pu6BCxiN2yABEcR3P4sXtBjkog9GXNxWbav1` |
+| **TON** | `UQCp0OawnofpZTNZk-69wlqIx_wQpzKBgDpxY2JK5iynh3mC` |

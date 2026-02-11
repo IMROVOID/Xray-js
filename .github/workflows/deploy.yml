@@ -16,14 +16,30 @@ jobs:
         uses: actions/checkout@v4
 
       # 1. Build WASM
-      - name: Build WASM from Source
+      - name: Build WASM from Source (Patched)
         run: |
-          git clone https://github.com/mmmray/xray-core.git build-source
-          cd build-source
+          # 1. Read version
+          XRAY_VERSION=$(cat xray-version.txt)
+          echo "Building Xray version: $XRAY_VERSION"
+          
+          # 2. Clone Upstream
+          mkdir -p assets
+          git clone https://github.com/xtls/xray-core.git assets/xray-core
+          cd assets/xray-core
+          git checkout $XRAY_VERSION
+          
+          # 3. Apply Patch
+          # The patch file is in the root of the repo (../../xray-wasm.patch relative to assets/xray-core)
+          git apply ../../xray-wasm.patch
+          
+          # 4. Move to patched location
+          cd ../..
+          rm -rf assets/xray-patched
+          mv assets/xray-core assets/xray-patched
+          
+          # 5. Build
           go mod tidy
-          GOOS=js GOARCH=wasm go build -o ../public/main.wasm -trimpath -ldflags "-s -w" ./main
-          cd ..
-          rm -rf build-source
+          GOOS=js GOARCH=wasm go build -o public/main.wasm -trimpath -ldflags "-s -w" main.go
           ls -lh public/main.wasm
 
       # 2. Build React App

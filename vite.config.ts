@@ -7,5 +7,5 @@ export default defineConfig(({ mode }) => ({
     build: {
         target: 'esnext' // Support Top-level await
     },
-    base: './',
+    base: '/Xray-js/',
 }))
